@@ -6,6 +6,7 @@ export default class About extends Component {
             <div>
                 NODEJS / REACT Project Timer Web App
                 <br/>
+                <br/>
                 ====================================
                 <br/>
                 Tech Stack

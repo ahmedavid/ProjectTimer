@@ -3,7 +3,7 @@ import {PROJECTS_FETCH} from './types';
 
 export const projectsFetch = () => {
     return (dispatch) => {
-        axios.get('http://localhost:3000/api').then( (response) => {
+        axios.get('https://projecttimer.herokuapp.com/api').then( (response) => {
             dispatch({
                 type:PROJECTS_FETCH,
                 payload:response.data
@@ -14,7 +14,7 @@ export const projectsFetch = () => {
 
 export const projectsUpdate = (id) => {
     return (dispatch) => {
-        axios.post('http://localhost:3000/api/'+id).then( (response) => {
+        axios.post('https://projecttimer.herokuapp.com/api/'+id).then( (response) => {
             dispatch({
                 type:PROJECTS_FETCH,
                 payload:response.data
@@ -25,7 +25,7 @@ export const projectsUpdate = (id) => {
 
 export const projectsCreate = (project) => {
     return (dispatch) => {
-        axios.post('http://localhost:3000/api',{project}).then( (response) => {
+        axios.post('https://projecttimer.herokuapp.com/api',{project}).then( (response) => {
             dispatch({
                 type:PROJECTS_FETCH,
                 payload:response.data
@@ -36,7 +36,7 @@ export const projectsCreate = (project) => {
 
 export const projectsDelete = (id) => {
     return (dispatch) => {
-        axios.delete('http://localhost:3000/api/' + id).then( (response) => {
+        axios.delete('https://projecttimer.herokuapp.com/api/' + id).then( (response) => {
             dispatch({
                 type:PROJECTS_FETCH,
                 payload:response.data
